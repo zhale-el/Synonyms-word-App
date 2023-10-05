@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+
+:root {
+  --dark-color: #575757;
+  --red-color: #ff5252;
+  --dark-red-color: #ff4141;
+  --light-color: #fff;
+  --light-gray-color: #efefee;
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: var(--light-gray-color);
+  color: var(--dark-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.word-app-header-content {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+  /* background-color: var(--light-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.word-app-header-title {
+  text-transform: uppercase;
+}
+.word-app-header-title i {
+  color: var(--red-color);
+}
+
+.word-app-header-title span {
+  font-size: 2.6rem;
+}
+.word-app-header-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--red-color);
+  color: var(--light-color);
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 1.6rem;
+  border-radius: 6px;
+  transition: var(--transition);
+  display: none;
+}
+
+.word-app-header-link:hover {
+  background-color: var(--dark-red-color);
+}
+.word-app-searchbox {
+  margin-top: 3rem;
+}
+.word-app-searchbox-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-element {
+  background-color: var(--light-color);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+.form-icon,
+#submit-btn {
+  color: var(--dark-color);
+  font-size: 2.4rem;
+  margin: 0 1.6rem;
+}
+.form-input {
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: 0;
+  width: 100%;
+}
+.word-app-body {
+  display: none;
+}
+.word-app-body-content {
+  width: 800px;
+  margin: 0 auto;
+}
+#word-list {
+  background-color: var(--light-color);
+  border-radius: 4px;
+  padding: 3rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.word-item {
+  font-size: 1.7rem;
+  font-weight: 500;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  padding: 0.8rem 1.6rem;
+  margin: 1rem 0.7rem;
+  display: inline-block;
+  opacity: 0.9;
+  border-radius: 3px;
+  overflow: hidden;
+}
+#copy-btn {
+  background-color: var(--red-color);
+  color: var(--light-color);
+  padding: 1.5rem 2rem;
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+#copy-btn:hover {
+  background-color: var(--dark-red-color);
+}
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .word-app-header-link {
+    display: block;
+  }
+  .form-input {
+    min-width: 480px;
+  }
+}
