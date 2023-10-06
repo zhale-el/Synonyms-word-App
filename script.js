@@ -36,10 +36,29 @@ const renderWords = (wordsArr) => {
     htmlCode = wordsArr.map((word) => {
       return `<span class="word-item">${word.word}</span>`;
     });
-    wordListContainer.innerHTML = htmlCode.join("");
+    wordListContainer.innerHTML = htmlCode.join(" ");
   } else {
+    wordNotFound = true;
     htmlCode = "No search results found";
     wordListContainer.innerHTML = htmlCode;
   }
   wordAppBody.style.display = "block";
 };
+
+const copyWordList = () => {
+  if (!wordNotFound) {
+    let words = wordListContainer.textContent.split(" ");
+
+    let filteredWords = words.filter((word) => {
+      return word.length !== 0;
+    });
+
+    let wordToCopy = filteredWords.join(", ");
+
+    navigator.clipboard.writeText(wordToCopy);
+  } else {
+    console.log("Nothing to copy");
+  }
+};
+
+copyBtn.addEventListener("click", copyWordList);
